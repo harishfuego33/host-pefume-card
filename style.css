@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Source+Code+Pro:wght@200&display=swap');
+:root
+{
+  --Darkcyan:hsl(158, 36%, 37%);
+  --Cream:hsl(30, 38%, 92%);
+  --Verydarkblue:hsl(212, 21%, 14%);
+  --Darkgrayishblue:hsl(228, 12%, 48%);
+  --White:hsl(0, 0%, 100%);
+}
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html
+{
+  font-size: 62.5%;
+}
+
+body
+{
+  background: var(--Cream);
+}
+.container
+{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  border-radius:1.5rem;
+  background: var(--White);
+  /* min-height: 720px; */
+}
+.container img
+{
+  width: 50%;  
+  height: 100%;
+  border: 1.5rem;
+  border-radius:1.5rem 0 0 1.5rem;
+}
+.discription
+{
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
+  gap: 2.5rem;
+}
+.Perfume h3
+{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--Darkgrayishblue);
+}
+.Perfume-type p
+{
+  font-family: 'Fraunces',sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 1;
+    
+}
+.Perfume-incr h3
+{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--Darkgrayishblue);
+  line-height: 2.1rem;
+  font-size: 1.4rem;
+  word-spacing: 2px;
+}
+
+.Perfume-cost
+{
+  display:flex;
+  gap:1rem;
+  align-items: center;
+  /* padding-top: 2rem; */
+  
+}
+.Perfume-curr-cost p
+{
+  font-family: 'Fraunces', sans-serif;
+  font-size: 3.5rem;
+  color: var(--Darkcyan);
+}
+.x-Perfume-curr-cost s
+{
+  
+  font-family: 'Montserrat', sans-serif;
+  color: var(--Darkgrayishblue);
+  font-size: 1rem;
+  
+}
+.add-to-cart
+{
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  background: var(--Darkcyan);
+  color: var(--White);
+  gap: 1rem;
+  border-radius:1rem;
+}
+.attribution
+{
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a 
+{
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width:620px)
+{
+  .container
+  {
+    width: 95%;
+    min-width: 350px;
+    height:   100%;
+    flex-direction: column;
+    max-width: 330px ;
+    min-height:720px;
+  }
+  .container img
+  {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  .discription
+  {
+    margin: 2rem;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 480px)
+{
+  .container
+  {
+    width: 90%; /* Adjusted width for smaller screens */
+  }
+
+  .container img
+  {
+    height: 40vh; /* Set a percentage of the viewport height for better scaling on small screens */
+  }
+}
